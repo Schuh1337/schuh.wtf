@@ -1,0 +1,12 @@
+body {
+    background-color: #171717;
+    color: #fff;
+    text-align: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    color: #2D2D2D;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
