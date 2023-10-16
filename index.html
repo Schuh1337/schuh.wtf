@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <title></> Schuh</title>
+</head>
+<body>
+    <canvas id="stars"></canvas>
+
+    <script>
+        const canvas = document.getElementById('stars');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+
+        const stars = [];
+
+        for (let i = 0; i < 200; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                opacity: Math.random(),
+                glowSpeed: Math.random() * 0.02 + 0.01,
+                direction: Math.random() < 0.5 ? 1 : -1
+            });
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < stars.length; i++) {
+                const star = stars[i];
+                star.opacity += star.direction * star.glowSpeed;
+
+                if (star.opacity > 1) {
+                    star.direction = -1;
+                } else if (star.opacity < 0) {
+                    star.direction = 1;
+                    star.x = Math.random() * canvas.width;
+                    star.y = Math.random() * canvas.height;
+                }
+
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+                ctx.fill();
+            }
+
+            requestAnimationFrame(animateStars);
+        }
+
+        animateStars();
+
+        window.addEventListener('resize', resizeCanvas);
+    </script>
+</body>
+</html>
