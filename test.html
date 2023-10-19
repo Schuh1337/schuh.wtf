@@ -295,6 +295,9 @@
     const playPauseButton = document.getElementById('playPauseButton');
     let isPlaying = false;
 
+    audioPlayer.volume = 0.8;
+    audioPlayer.loop = true
+
     playPauseButton.addEventListener('click', () => {
       if (isPlaying) {
         audioPlayer.pause();
