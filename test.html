@@ -288,6 +288,19 @@
       </div>
     </div>
   </div>
+  <script>
+    const popup = document.getElementById('popup');
+    const popupButton = document.getElementById('popupButton');
+    const popupCloseButton = document.getElementById('popupCloseButton');
+    popupButton.addEventListener('click', () => {
+        popup.style.display = 'block';
+        setTimeout(() => {
+            popup.style.opacity = 1;}, 10);});
+    popupCloseButton.addEventListener('click', () => {
+        popup.style.opacity = 0;
+        setTimeout(() => {
+            popup.style.display = 'none';}, 300);});
+</script>
 <div class="credits-uwu">Made by Schuh</div>
 </body>
 </html>
