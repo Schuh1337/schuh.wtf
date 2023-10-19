@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     value: 100,
                     density: {
                         enable: true,
-                        value_area: 10000,
+                        value_area: 1000,
                     },
                 },
                 color: {
