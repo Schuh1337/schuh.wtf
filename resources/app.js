@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     value: 100,
                     density: {
                         enable: true,
-                        value_area: 1100,
+                        value_area: 1000,
                     },
                 },
                 color: {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         },
                     },
                     bubble: {
-                        distance: 400,
+                        distance: 200,
                         size: 40,
                         duration: 2,
                         opacity: 8,
