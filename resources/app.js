@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         enable: false,
                         mode: 'push',
                     },
-                    resize: true,
+                    resize: false,
                 },
                 modes: {
                     grab: {
