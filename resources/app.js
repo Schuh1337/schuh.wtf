@@ -64,6 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                 },
             },
+            interactivity: {
+                detect_on: 'window',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse',
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push',
+                    },
+                    resize: true,
+                },
                 modes: {
                     grab: {
                         distance: 400,
