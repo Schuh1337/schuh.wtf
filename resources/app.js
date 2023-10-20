@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 detect_on: 'window',
                 events: {
                     onhover: {
-                        enable: false,
+                        enable: true,
                         mode: 'repulse',
                     },
                     onclick: {
