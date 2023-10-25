@@ -6,7 +6,7 @@
     <title>404 - Page Not Found</title>
     <style>
         body {
-            background: linear-gradient(-180deg, #000000, #ffffff0e);
+            background: linear-gradient(180deg, #000000, #ffffff0e);
             color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
@@ -20,9 +20,15 @@
         }
 
         h1 {
-            font-size: 6em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-size: 6em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(135deg, #2d2b2b, #8c5a94);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -ms-background-clip: text;
+        background-clip: text;
+        color: transparent;
         }
 
         p {
@@ -30,9 +36,9 @@
         }
 
         a {
-            color: #6ab04c;
+            color: #4bbb28;
             text-decoration: none;
-            border-bottom: 2px solid #6ab04c;
+            border-bottom: 2px solid #00000000;
         }
 
         a:hover {
@@ -43,31 +49,22 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
     </style>
-<script>
-    document.addEventListener('keydown', function (e) {if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C')) {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'u') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 's') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'p') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'g') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'f') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'o') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'j') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'h') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'd') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === '+') {e.preventDefault();}});
-    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === '-') {e.preventDefault();}});
-    (function () {let SSWZ = function () {this.keyScrollHandler = function (e) {if (e.ctrlKey) {e.preventDefault(); return false;}}}; if (window === top) {let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false });}})();
-    document.addEventListener('contextmenu', function (e) {e.preventDefault();});
-    var msg = "";
-    msg = "404" + msg;
-    var position = 0;
-    function scrolltitle() {
-      document.title = msg.substring(position, msg.length) + msg.substring(0, position);
-      position++;
-      if (position > msg.length) position = 0;
-      window.setTimeout(scrolltitle, 400);}
-    scrolltitle();
-</script>
+    <script>
+        document.addEventListener('keydown', function (e) {if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C')) {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'u') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 's') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'p') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'g') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'f') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'o') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'j') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'h') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'd') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === '+') {e.preventDefault();}});
+        document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === '-') {e.preventDefault();}});
+        (function () {let SSWZ = function () {this.keyScrollHandler = function (e) {if (e.ctrlKey) {e.preventDefault(); return false;}}}; if (window === top) {let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false });}})();
+        document.addEventListener('contextmenu', function (e) {e.preventDefault();});
+    </script>
 </head>
 <body>
     <div class="container">
