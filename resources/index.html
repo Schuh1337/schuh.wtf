@@ -1,0 +1,355 @@
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+<!-- !! if you're gonna steal this, leave in the credits. have some sportsmanship. !! -->
+
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="166x166" href="litecoin.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #1e1e1e;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    }
+
+    .text-overlay {
+      display: none;
+    }
+
+    .container {
+      background-color: rgba(34, 34, 34, 0.75); 
+      padding: 20px;
+      border-radius: 10px;
+      user-select: none;
+      text-align: center;
+      width: 480px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      margin: 0 auto;
+    }
+
+    .button-container {
+      text-align: center;
+      position: absolute;
+      user-select: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Arial', sans-serif;
+      padding: 14px 30px;
+      background-color: transparent;
+      color: #ffffff;
+      text-decoration: none;
+      user-select: none;
+      border-radius: 5px;
+      font-size: 18px; 
+      cursor: pointer;
+      border: 1px solid #ffffff;
+      margin: 10px auto;
+      width: 60%;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
+                     0 0 30px rgba(255, 255, 255, 0.4);
+      }
+      100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    @font-face {
+      font-family: 'angelwings';
+      src: url(Angelwish.ttf);
+      }
+
+    .header-label {
+      font-family: 'angelwings';
+      font-size: 56px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 10px 0;
+      animation: glow 2s linear infinite;
+    }
+
+    .description {
+      font-family: 'Arial', sans-serif;
+      font-size: 20px; 
+      color: #ffffff;
+      margin: 5px 0;
+      margin-bottom: 25px;
+    }
+
+    .play-icon {
+      font-size: 24px;
+    }
+
+    .center-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .small-button {
+      font-family: 'Arial', sans-serif;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      border: 1px solid #ffffff;
+      margin: 0 10px;
+      width: auto;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .profile-picture {
+      display: block;
+      margin: 0 auto;
+      max-width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      margin-top: 3px;
+    }
+
+    .small-button:hover {
+      background-color: transparent;
+      border-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+    }
+
+    .popup {
+      display: none;
+      position: absolute;
+      font-family: 'Arial', sans-serif;
+      top: 50%;
+      left: 50%;
+      user-select: none;
+      margin-top: 280px;
+      transform: translate(-50%, -50%);
+      background-color: rgba(34, 34, 34, 0.75);
+      padding: 20px;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      width: 40%;
+      max-width: 360px;
+      border-top-width: 10px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .popup-content {
+      position: relative;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: -35px;
+      right: -10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .play-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      user-select: none;
+      transform: translateX(-50%);
+      font-size: 20px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .credits-uwu {
+      user-select: none;
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: #ffffff;
+    }
+  </style>
+  <script>
+    /* kinda useless but cool :P */
+    document.addEventListener('keydown', function (e) {if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C')) {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'u') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 's') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'p') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'g') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'f') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'o') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'j') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'h') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === 'd') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === '+') {e.preventDefault();}});
+    document.addEventListener('keydown', function (e) {if (e.ctrlKey && e.key === '-') {e.preventDefault();}});
+    (function () {let SSWZ = function () {this.keyScrollHandler = function (e) {if (e.ctrlKey) {e.preventDefault(); return false;}}}; if (window === top) {let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false });}})();
+    document.addEventListener('contextmenu', function (e) {e.preventDefault();});
+  </script>
+  <script>
+    var msg = "";
+    msg = "Schuh" + msg;
+    var position = 0;
+    function scrolltitle() {
+      document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+      position++;
+      if (position > msg.length) position = 0;
+      window.setTimeout(scrolltitle, 400);
+    }
+    scrolltitle();
+  </script>
+</head>
+<body>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="popup-close" id="popupCloseButton">&times;</span>
+        <p>16<br>Germany<br><br>
+          <span style="user-select: text;">schuh@schuh.wtf</span>
+        </p>
+    </div>
+  </div>
+  <div id="particles-js"></div>
+  <script src="particles.min.js"></script>
+  <script src="app.js"></script>
+  <div class="center-box">
+    <div class="container">
+      <img src="https://cdn.discordapp.com/avatars/492707412504215552/a_ac523bc42dcc0d3e7eec195e754620ff.gif?size=1024" alt="Profile Picture" class="profile-picture">
+      <div class="header-label">Schuh</div>
+      <div class="description">pockets full of gold</div>
+      <div class="button-group">
+        <!-- javascript buttons to "bypass" the onhover link preview -->
+        <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://luaxx.com/silky');">
+          <i class="fab fa-discord"></i> Silky
+        </a>
+        </a>
+        <a class="small-button" id="popupButton" style="cursor: pointer;">
+          <i class="fa-solid fa-message"></i>&nbsp;&nbsp;About Me
+        </a>
+        <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://github.com/Schuh1337');">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+  <audio id="audioPlayer" src="fall.mp3"></audio>
+  <div class="play-button">
+    <i id="playPauseButton" class="fas fa-play"></i>
+  </div>
+  <script>
+    const popup = document.getElementById('popup');
+    const popupButton = document.getElementById('popupButton');
+    const popupCloseButton = document.getElementById('popupCloseButton');
+    let popupVisible = false;
+    popupButton.addEventListener('click', () => {
+        if (!popupVisible) {
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.opacity = 1;
+            }, 15);
+            popupVisible = true;
+        } else {
+            closePopup();
+        }
+    });
+    popupCloseButton.addEventListener('click', () => {
+        closePopup();
+    });
+    function closePopup() {
+        popup.style.opacity = 0;
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 400);
+        popupVisible = false;
+    }
+
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseButton = document.getElementById('playPauseButton');
+    let isPlaying = false;
+
+    audioPlayer.volume = 0.85;
+    audioPlayer.loop = true
+
+    playPauseButton.addEventListener('click', () => {
+      if (isPlaying) {
+        audioPlayer.pause();
+        playPauseButton.classList.remove('fa-pause');
+        playPauseButton.classList.add('fa-play');
+      } else {
+        audioPlayer.play();
+        playPauseButton.classList.remove('fa-play');
+        playPauseButton.classList.add('fa-pause');
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+  <div class="credits-uwu">Made by Schuh</div>
+</body>
+</html>
+<meta name="theme-color" content="#151515">
+<meta property="og:title" content="Schuh">
+<meta property="og:description" content="meowmeowmeow (◣_◢)">
+<meta property="og:image" content="https://schuh.wtf/resources/litecoin.png">
+<meta property="og:site_name" content="schuh.wtf">
+<meta property="og:url" content="https://schuh.wtf">
