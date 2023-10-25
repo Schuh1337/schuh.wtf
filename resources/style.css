@@ -76,7 +76,7 @@ body {
 
   @font-face {
     font-family: 'angelwings';
-    src: url(resources/Angelwish.ttf);
+    src: url(Angelwish.ttf);
     }
 
   .header-label {
