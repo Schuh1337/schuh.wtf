@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 move: {
                     enable: true,
-                    speed: 3,
+                    speed: 2.5,
                     direction: 'none',
                     random: false,
                     straight: false,
