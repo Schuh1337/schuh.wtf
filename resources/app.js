@@ -8,9 +8,6 @@ document.addEventListener('keydown', function (e) {if ((e.key === 'F12' || (e.ct
       const ctx = canvas.getContext('2d');
       const particles = [];
 
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-
       window.addEventListener('click', function (e) {
         createBurst(e.x, e.y);
       });
