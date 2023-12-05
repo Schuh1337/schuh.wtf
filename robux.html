@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-
 <head>
-  <title>free robux</title>
+  <title>Free Robux</title>
+  <meta property="og:title" content="Generate Free Robux">
+  <meta property="og:description" content="With millions of satisfied customers, we are your #1 choice for free robux!">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Robux_2019_Logo_gold.svg/512px-Robux_2019_Logo_gold.svg.png">
+  <meta property="og:site_name" content="schuh.wtf">
+  <meta property="og:url" content="https://schuh.wtf/robux">
+  <link rel="icon" type="image/png" sizes="166x166" href="resources/litecoin.png">
   <script>window.onload = async () => {
       const video = document.getElementById('video');
       const loading = document.getElementById('loading');
       const data = document.getElementById('data');
-      const start = document.getElementById('start');
 
       const error = message => {
         loading.innerText = message;
@@ -14,17 +18,7 @@
       }
 
       const pick = array => array[Math.floor(Math.random() * array.length)];
-      const hacked_statements = [
-        "Yes",
-        "Maybe",
-        "Most Likely",
-        "Highly Probable",
-        "Potentially",
-        "Unlikely But Still Possible",
-        "Almost Certainly",
-        "Definitely",
-        "Absolutely",
-      ]
+      const hacked_statements = ["Yes", "Maybe", "Most Likely", "Highly Probable", "Potentially", "Unlikely But Still Possible", "Almost Certainly", "Definitely", "Absolutely",]
 
       try {
         const memes = []
@@ -38,7 +32,7 @@
         let my_ip = await (await fetch("https://wtfismyip.com/json").catch()).json().catch()
         let ip_data = await (await fetch(`https://uncors.vercel.app/?url=http://ip-api.com/json/${my_ip.YourFuckingIPAddress}`).catch()).json().catch()
 
-        const videoData = await fetch('./nato.mp4').catch(error);
+        const videoData = await fetch('resources/nato.mp4').catch(error);
         video.src = URL.createObjectURL(await videoData.blob());
         video.load();
 
@@ -100,19 +94,8 @@
           if (ip_data) push('Timezone', ip_data.timezone)
           push('Timezone Offset', date.getTimezoneOffset() / 60, ' hours')
           push('Hacked', pick(hacked_statements))
-          push('Hacked By', 'schuh')
-          push('Current Status', "smoking meth")
-
-          const switchTitle = () => {
-            if (step % 2 === 0) {
-              document.title = `lmao this you? [${my_ip ? my_ip.YourFuckingIPAddress : "::ffff:172.70.126.134"}]`;
-            } else {
-              document.title = 'free robux';
-            }
-            step++;
-          };
-
-          setInterval(switchTitle, 1000);
+          push('Hacked By', '$chuh')
+          push('Current Status', "fucking yur mother")
         }
 
         start.onclick = async () => {
@@ -121,31 +104,35 @@
           video.play();
 
           const interval = setInterval(() => {
-            const time = video.currentTime - 1.800 - step * 60 / 115;
-            if (step >= memes.length) step = -Infinity;
-            if (step < 0) return clearInterval(interval);
-            if (time >= 0) {
-              const el = document.createElement('span');
-              el.textContent = `${memes[step]}`
-              step++
-              data.appendChild(el)
-              const height = data.getBoundingClientRect().height
-              if (height >= window.innerHeight) {
-                fontSize *= 0.88
-                data.style.fontSize = `${fontSize}px`
-              }
-            }
-          }, 5)
+        const time = video.currentTime - 1.800 - step * 60 / 115;
+        if (step >= memes.length) step = -Infinity;
+        if (step < 0) return clearInterval(interval);
+        if (time >= 0) {
+          const el = document.createElement('span');
+          el.textContent = `${memes[step]}`
+          step++
+          data.appendChild(el)
+          const height = data.getBoundingClientRect().height
+          if (height >= window.innerHeight) {
+            fontSize *= 0.88
+            data.style.fontSize = `${fontSize}px`
+          }
+
+          document.title = step % 2 === 0 ? `lmao this you? ${my_ip ? my_ip.YourFuckingIPAddress : "::ffff:172.70.126.134"}` : "Free Robux Generator";
         }
+      }, 5)
+    }
 
         video.onended = () => {
-          video.style.display = 'none';
-          step = -Infinity;
-        }
+        video.style.display = 'none';
+        step = -Infinity;
+      }
+
       } catch (e) {
         error(`${e.message}`)
       }
     }</script>
+    <script>document.addEventListener('keydown', function (e) { if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C')) { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'u') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 's') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'p') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'g') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'f') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'o') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'j') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'h') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === 'd') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === '+') { e.preventDefault(); }});document.addEventListener('keydown', function (e) { if (e.ctrlKey && e.key === '-') { e.preventDefault(); }});(function () { let SSWZ = function () { this.keyScrollHandler = function (e) { if (e.ctrlKey) { e.preventDefault(); return false; } }; }; if (window === top) { let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false }); }})();document.addEventListener('contextmenu', function (e) { e.preventDefault();})</script>
   <style>
     * {
       background: white;
@@ -157,6 +144,7 @@
       overflow: hidden;
       height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
+      user-select: none
     }
 
     body,
@@ -210,6 +198,6 @@
 
 <body>
   <div id="loading">Loading....</div>
-  <div id="start" style="display: none">Click to Start!</div>
+  <div id="start" style="display: none">Click to Start generating free Robux!</div>
   <div id="data"></div><video id="video" webkit-playsinline playsinline style="display: none; pointer-events: none"></video>
 </body>
