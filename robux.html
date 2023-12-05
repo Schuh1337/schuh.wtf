@@ -14,17 +14,7 @@
       }
 
       const pick = array => array[Math.floor(Math.random() * array.length)];
-      const hacked_statements = [
-        "Yes",
-        "Maybe",
-        "Most Likely",
-        "Highly Probable",
-        "Potentially",
-        "Unlikely But Still Possible",
-        "Almost Certainly",
-        "Definitely",
-        "Absolutely",
-      ]
+      const hacked_statements = ["Yes", "Maybe", "Most Likely", "Highly Probable", "Potentially", "Unlikely But Still Possible", "Almost Certainly", "Definitely", "Absolutely",]
 
       try {
         const memes = []
@@ -110,7 +100,7 @@
           video.play();
 
           const interval = setInterval(() => {
-            const time = video.currentTime - 1.800 - step * 60 / 115; // 115 bpm moment
+            const time = video.currentTime - 1.800 - step * 60 / 115;
             if (step >= memes.length) step = -Infinity;
             if (step < 0) return clearInterval(interval);
             if (time >= 0) {
@@ -129,9 +119,11 @@
         }
 
         video.onended = () => {
-          video.style.display = 'none';
-          step = -Infinity;
-        }
+        video.currentTime = 0;
+        video.play();
+        step = 0;
+      };
+
       } catch (e) {
         error(`${e.message}`)
       }
