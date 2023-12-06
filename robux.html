@@ -113,7 +113,7 @@
             push('GPU Vendor', gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL));
             push('GPU Info', gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL));
           }
-          push('Device Memory', `${navigator.deviceMemory}`)
+          push('Dedicated GPU Memory', `${navigator.deviceMemory}`)
           push('System Languages', navigator.languages.join(', '))
           push('Language', `${navigator.language}`)
           let date = new Date()
