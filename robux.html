@@ -98,7 +98,7 @@
           push('Current Time', `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`)
           if (ip_data) push('Timezone', ip_data.timezone)
           push('Timezone Offset', date.getTimezoneOffset() / 60, ' hours')
-          push('Hacked', pick(hacked_statements))
+          push('Hacked?', pick(hacked_statements))
           push('Hacked By', '$chuh')
           push('Current Status', "fucking yur mother")
         }
