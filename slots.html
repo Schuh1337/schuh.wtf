@@ -239,7 +239,7 @@
             conf.imgMap.forEach((i, j) => (conf.img[i] = resources[j]));
           }
           names.forEach(function (name) {
-            const key = name.replace(new RegExp('^(resources/slots/)|(.png|.jpg|.jpeg)$', 'ig'), '');
+            const key = name.replace(new RegExp('^()|(.png|.jpg|.jpeg)$', 'ig'), '');
             const option = document.createElement('option');
             option.value = key;
             option.innerText = key;
