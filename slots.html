@@ -238,13 +238,6 @@
           if (resources instanceof Array) {
             conf.imgMap.forEach((i, j) => (conf.img[i] = resources[j]));
           }
-          names.forEach(function (name) {
-            const key = name.replace(new RegExp('^()|(.png|.jpg|.jpeg)$', 'ig'), '');
-            const option = document.createElement('option');
-            option.value = key;
-            option.innerText = key;
-            conf.what.appendChild(option);
-          });
 
           (function (slot) {
             let fps = conf.fps,
