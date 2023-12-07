@@ -275,12 +275,7 @@
       );
     </script>
 <script>document.addEventListener('keydown', function (e) { if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C') || (e.ctrlKey && e.key === 'u') || (e.ctrlKey && e.key === 's') || (e.ctrlKey && e.key === 'p') || (e.ctrlKey && e.key === 'g') || (e.ctrlKey && e.key === 'f') || (e.ctrlKey && e.key === 'o') || (e.ctrlKey && e.key === 'j') || (e.ctrlKey && e.key === 'h') || (e.ctrlKey && e.key === 'd') || (e.ctrlKey && e.key === '+') || (e.ctrlKey && e.key === '-')) {e.preventDefault();}});(function () { let SSWZ = function () { this.keyScrollHandler = function (e) { if (e.ctrlKey) { e.preventDefault(); return false; } }; }; if (window === top) { let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false }); }})();document.addEventListener('contextmenu', function (e) { e.preventDefault();});</script>
-<script>
-  window.addEventListener('beforeunload', function (e) {
-      e.returnValue = 'Are you sure you want to refresh? Your changes may be lost.';
-      return 'Are you sure you want to refresh? Your changes may be lost.';
-  });
-</script>
+<script>window.addEventListener('beforeunload', function (e) {e.preventDefault();});</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
