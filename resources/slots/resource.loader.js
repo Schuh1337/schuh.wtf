@@ -8,7 +8,6 @@ const Resources = (function (loader, global) {
     $resources = [],
     $imgs = [];
 
-  //extension black listing
   resources.forEach((resource) => {
     const split = resource.split('.'),
       extension = split[split.length - 1];
@@ -28,7 +27,6 @@ const Resources = (function (loader, global) {
 
   (function loadImage(index = 0) {
     if (undefined === $resources[index]) {
-      //exec callbacks
       loadCallbacks.forEach((f) => f.call(this, $imgs, $resources));
 
       return;
