@@ -88,7 +88,6 @@
       </div>
     </div>
 
-    <!-- Paytable modal -->
     <div class="modal fade" id="payTable" tabindex="-1" role="dialog" aria-labelledby="payTableTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -231,13 +230,13 @@
         autoModeDelay: 3000
       };
 
-      Resources('./img/BAR.png', './img/2xBAR.png', './img/3xBAR.png', './img/7.png', './img/Cherry.png').onLoad(
+      Resources('resources/slots/BAR.png', 'resources/slots/2xBAR.png', 'resources/slots/3xBAR.png', 'resources/slots/7.png', 'resources/slots/Cherry.png').onLoad(
         function (resources, names) {
           if (resources instanceof Array) {
             conf.imgMap.forEach((i, j) => (conf.img[i] = resources[j]));
           }
           names.forEach(function (name) {
-            const key = name.replace(new RegExp('^(./img/)|(.png|.jpg|.jpeg)$', 'ig'), '');
+            const key = name.replace(new RegExp('^(resources/slots/)|(.png|.jpg|.jpeg)$', 'ig'), '');
             const option = document.createElement('option');
             option.value = key;
             option.innerText = key;
