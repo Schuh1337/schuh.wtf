@@ -13,7 +13,6 @@ const Reel = function (canvas, offsetX = 0) {
   this.fixedPlace = 'top';
   this.fixedImg = 'BAR';
   this.finalShapes = [];
-  //clear whole reel
   const clear = function () {
     canvas.clearRect(offsetX, conf.height, conf.reel.width, conf.height);
   };
