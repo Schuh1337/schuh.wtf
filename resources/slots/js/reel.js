@@ -1,5 +1,4 @@
 const Reel = function (canvas, offsetX = 0) {
-  //generate img objects for a reel
   this.reelMap = conf.imgMap.shuffle().map((text, index) => ({
     offsetY: conf.reel.height * conf.imgStartPts[index],
     key: text,
@@ -14,12 +13,10 @@ const Reel = function (canvas, offsetX = 0) {
   this.fixedPlace = 'top';
   this.fixedImg = 'BAR';
   this.finalShapes = [];
-  //clear whole reel
   const clear = function () {
     canvas.clearRect(offsetX, conf.height, conf.reel.width, conf.height);
   };
 
-  //draw image to specific point
   const draw = function (key = 'BAR', offsetY = 0, blur = 0) {
     if (conf.img.hasOwnProperty(key)) {
       clear();
@@ -40,12 +37,10 @@ const Reel = function (canvas, offsetX = 0) {
     this.reelMap.forEach((img) => {
       img.offsetY += conf.pSkip;
 
-      //reset prev and jump very top
       if (img.offsetY >= conf.height) {
         img.offsetY = conf.reel.height * -3;
       }
 
-      //draw img object
       draw(img.key, img.offsetY, 4);
     });
   };
@@ -172,7 +167,6 @@ const Reel = function (canvas, offsetX = 0) {
       }
       img.offsetY += inx;
 
-      //draw img object
       draw(img.key, img.offsetY);
     });
   };
