@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="theme-color" content="#000000">
     <meta name="viewport" content="width=480,initial-scale=1, maximum-scale=1">
     <meta property="title" content="Start gambling">
     <meta name="description" content="Slots">
     <title>Slots</title>
-    <link rel="icon" href="resources/slots/img/Cherry.png">
-    <script src="resources/slots/js/helpers.js"></script>
-    <script src="resources/slots/js/resource.loader.js"></script>
+    <link rel="icon" href="resources/slots/Cherry.png">
+    <script src="resources/slots/helpers.js"></script>
+    <script src="./Slots_files/resource.loader.js.download"></script>
     <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="resources/slots/style.css">
   </head>
   <body>
     <div class="container">
-      <h2 class="text-center text-light my-3 gold">Slots</h2>
+      <h2 class="text-center text-light my-3 gold">Slot Game</h2>
       <div class="row justify-content-center mb-3">
         <div class="col col-auto">
           <canvas id="slot" width="440" height="240"></canvas>
@@ -73,12 +72,15 @@
             <option value="middle">Middle</option>
             <option value="bottom">Bottom</option>
           </select>
-          <select id="what" class="btn btn-default"></select>
+          <select id="what" class="btn btn-default"><option value="BAR">BAR</option><option value="2xBAR">2xBAR</option><option value="3xBAR">3xBAR</option><option value="7">7</option><option value="Cherry">Cherry</option></select>
         </div>
       </div>
 
       <div class="row justify-content-center my-3">
         <div class="col col-auto">
+          <button class="btn btn-warning w-auto" type="button" id="checkout">
+            <i class="fas fa-money-bill-alt"></i> CHECKOUT
+          </button>
           <button class="btn btn-primary w-auto" type="button" data-toggle="modal" data-target="#payTable">
             <i class="fas fa-money-bill-alt"></i> Pay Table
           </button>
@@ -86,20 +88,14 @@
       </div>
     </div>
 
-    <div
-      class="modal fade"
-      id="payTable"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="payTableTitle"
-      aria-hidden="true"
-    >
+    <!-- Paytable modal -->
+    <div class="modal fade" id="payTable" tabindex="-1" role="dialog" aria-labelledby="payTableTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="payTableTitle">Pay Table</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">x</span>
             </button>
           </div>
           <div class="modal-body">
@@ -116,77 +112,77 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><img src="resources/slots/img/Cherry.png" alt="cherry" width="40"></td>
-                  <td><img src="resources/slots/img/Cherry.png" alt="cherry" width="40"></td>
-                  <td><img src="resources/slots/img/Cherry.png" alt="cherry" width="40"></td>
+                  <td><img src="resources/slots/Cherry.png" alt="cherry" width="40"></td>
+                  <td><img src="resources/slots/Cherry.png" alt="cherry" width="40"></td>
+                  <td><img src="resources/slots/Cherry.png" alt="cherry" width="40"></td>
                   <td class="v-align">2000xBET</td>
                   <td class="v-align">1000xBET</td>
                   <td class="v-align">4000xBET</td>
                 </tr>
                 <tr>
-                  <td><img src="resources/slots/img/7.png" alt="seven" width="40"></td>
-                  <td><img src="resources/slots/img/7.png" alt="seven" width="40"></td>
-                  <td><img src="resources/slots/img/7.png" alt="seven" width="40"></td>
+                  <td><img src="resources/slots/7.png" alt="seven" width="40"></td>
+                  <td><img src="resources/slots/7.png" alt="seven" width="40"></td>
+                  <td><img src="resources/slots/7.png" alt="seven" width="40"></td>
                   <td class="v-align">150xBET</td>
                   <td class="v-align">150xBET</td>
                   <td class="v-align">150xBET</td>
                 </tr>
                 <tr>
                   <td>
-                    <img src="resources/slots/img/7.png" alt="seven" width="40">
-                    <img src="resources/slots/img/Cherry.png" alt="cherry" width="40">
+                    <img src="resources/slots/7.png" alt="seven" width="40">
+                    <img src="resources/slots/Cherry.png" alt="cherry" width="40">
                   </td>
                   <td>
-                    <img src="resources/slots/img/7.png" alt="seven" width="40">
-                    <img src="resources/slots/img/Cherry.png" alt="cherry" width="40">
+                    <img src="resources/slots/7.png" alt="seven" width="40">
+                    <img src="resources/slots/Cherry.png" alt="cherry" width="40">
                   </td>
                   <td>
-                    <img src="resources/slots/img/7.png" alt="seven" width="40">
-                    <img src="resources/slots/img/Cherry.png" alt="cherry" width="40">
+                    <img src="resources/slots/7.png" alt="seven" width="40">
+                    <img src="resources/slots/Cherry.png" alt="cherry" width="40">
                   </td>
                   <td class="v-align">75xBET</td>
                   <td class="v-align">75xBET</td>
                   <td class="v-align">75xBET</td>
                 </tr>
                 <tr>
-                  <td><img src="resources/slots/img/3xBAR.png" alt="3xbar" width="40"></td>
-                  <td><img src="resources/slots/img/3xBAR.png" alt="3xbar" width="40"></td>
-                  <td><img src="resources/slots/img/3xBAR.png" alt="3xbar" width="40"></td>
+                  <td><img src="resources/slots/3xBAR.png" alt="3xbar" width="40"></td>
+                  <td><img src="resources/slots/3xBAR.png" alt="3xbar" width="40"></td>
+                  <td><img src="resources/slots/3xBAR.png" alt="3xbar" width="40"></td>
                   <td class="v-align">50xBET</td>
                   <td class="v-align">50xBET</td>
                   <td class="v-align">50xBET</td>
                 </tr>
                 <tr>
-                  <td><img src="resources/slots/img/2xBAR.png" alt="2xbar" width="40"></td>
-                  <td><img src="resources/slots/img/2xBAR.png" alt="2xbar" width="40"></td>
-                  <td><img src="resources/slots/img/2xBAR.png" alt="2xbar" width="40"></td>
+                  <td><img src="resources/slots/2xBAR.png" alt="2xbar" width="40"></td>
+                  <td><img src="resources/slots/2xBAR.png" alt="2xbar" width="40"></td>
+                  <td><img src="resources/slots/2xBAR.png" alt="2xbar" width="40"></td>
                   <td class="v-align">20xBET</td>
                   <td class="v-align">20xBET</td>
                   <td class="v-align">20xBET</td>
                 </tr>
                 <tr>
-                  <td><img src="resources/slots/img/BAR.png" alt="1xbar" width="40"></td>
-                  <td><img src="resources/slots/img/BAR.png" alt="1xbar" width="40"></td>
-                  <td><img src="resources/slots/img/BAR.png" alt="1xbar" width="40"></td>
+                  <td><img src="resources/slots/BAR.png" alt="1xbar" width="40"></td>
+                  <td><img src="resources/slots/BAR.png" alt="1xbar" width="40"></td>
+                  <td><img src="resources/slots/BAR.png" alt="1xbar" width="40"></td>
                   <td class="v-align">10xBET</td>
                   <td class="v-align">10xBET</td>
                   <td class="v-align">10xBET</td>
                 </tr>
                 <tr>
                   <td>
-                    <img src="resources/slots/img/BAR.png" alt="1xbar" width="40">
-                    <img src="resources/slots/img/2xBAR.png" alt="2xbar" width="40">
-                    <img src="resources/slots/img/3xBAR.png" alt="3xbar" width="40">
+                    <img src="resources/slots/BAR.png" alt="1xbar" width="40">
+                    <img src="resources/slots/2xBAR.png" alt="2xbar" width="40">
+                    <img src="resources/slots/3xBAR.png" alt="3xbar" width="40">
                   </td>
                   <td>
-                    <img src="resources/slots/img/BAR.png" alt="1xbar" width="40">
-                    <img src="resources/slots/img/2xBAR.png" alt="2xbar" width="40">
-                    <img src="resources/slots/img/3xBAR.png" alt="3xbar" width="40">
+                    <img src="resources/slots/BAR.png" alt="1xbar" width="40">
+                    <img src="resources/slots/2xBAR.png" alt="2xbar" width="40">
+                    <img src="resources/slots/3xBAR.png" alt="3xbar" width="40">
                   </td>
                   <td>
-                    <img src="resources/slots/img/BAR.png" alt="1xbar" width="40">
-                    <img src="resources/slots/img/2xBAR.png" alt="2xbar" width="40">
-                    <img src="resources/slots/img/3xBAR.png" alt="3xbar" width="40">
+                    <img src="resources/slots/BAR.png" alt="1xbar" width="40">
+                    <img src="resources/slots/2xBAR.png" alt="2xbar" width="40">
+                    <img src="resources/slots/3xBAR.png" alt="3xbar" width="40">
                   </td>
                   <td class="v-align">5xBET</td>
                   <td class="v-align">5xBET</td>
@@ -201,8 +197,8 @@
         </div>
       </div>
     </div>
-    <script src="resources/slots/js/reel.js"></script>
-    <script src="resources/slots/js/slot.js"></script>
+    <script src="resources/slots/reel.js"></script>
+    <script src="resources/slots/slot.js"></script>
     <script>
       const conf = {
         fps: 60,
@@ -218,6 +214,7 @@
         balance: find('#balance'),
         bet: find('#bet'),
         win: find('#cwin'),
+        checkout: find('#checkout'),
         reel: {
           width: 140,
           height: 120,
@@ -234,13 +231,13 @@
         autoModeDelay: 3000
       };
 
-      Resources('resources/slots/img/BAR.png', 'resources/slots/img/2xBAR.png', 'resources/slots/img/3xBAR.png', 'resources/slots/img/7.png', 'resources/slots/img/Cherry.png').onLoad(
+      Resources('./img/BAR.png', './img/2xBAR.png', './img/3xBAR.png', './img/7.png', './img/Cherry.png').onLoad(
         function (resources, names) {
           if (resources instanceof Array) {
             conf.imgMap.forEach((i, j) => (conf.img[i] = resources[j]));
           }
           names.forEach(function (name) {
-            const key = name.replace(new RegExp('^(resources/slots/img/)|(.png|.jpg|.jpeg)$', 'ig'), '');
+            const key = name.replace(new RegExp('^(./img/)|(.png|.jpg|.jpeg)$', 'ig'), '');
             const option = document.createElement('option');
             option.value = key;
             option.innerText = key;
@@ -254,6 +251,7 @@
               lastpUpdate = 0;
 
             conf.spinBtn.onclick = slot.spin;
+            conf.checkout.onclick = slot.checkout;
             conf.mode.onchange = slot.setMode;
             conf.where.onchange = slot.setMode;
             conf.what.onchange = slot.setMode;
@@ -275,8 +273,9 @@
       );
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>
+  
