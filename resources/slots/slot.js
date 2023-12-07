@@ -60,7 +60,6 @@ const Slot = function (canvas) {
   this.loop = function (now) {
     reels.forEach((reel, i) => {
       this.drawStopPoints();
-      //init spin animation
       reel.spinAnimation();
       reel.spin2point();
 
@@ -133,17 +132,14 @@ const Slot = function (canvas) {
       bottom: 0,
     };
 
-    //coefficient - custom added.
     let bet = conf.bet.value * 1;
 
     let highlightPts = [];
-    //all reels are aligned in one line
     for (let r = 0; r < reels.length; r++) {
       let reel1 = reels[0][r],
         reel2 = reels[1][r],
         reel3 = reels[2][r];
       let reelsStr = reel1.key + reel2.key + reel3.key;
-      //top line
       if (reel1.stop === 0) {
         if (reelsStr.match(/(Cherry){3}/g)) sum.top += bet * 2000;
         else if (reelsStr.match(/(7){3}/g)) sum.top += bet * 150;
@@ -156,7 +152,6 @@ const Slot = function (canvas) {
           highlightPts.push(0 + conf.reel.height / 2);
         }
       }
-      //middle line
       if (reel1.stop === 60) {
         if (reelsStr.match(/(Cherry){3}/g)) sum.middle += bet * 1000;
         else if (reelsStr.match(/(7){3}/g)) sum.middle += bet * 150;
@@ -169,7 +164,6 @@ const Slot = function (canvas) {
           highlightPts.push(60 + conf.reel.height / 2);
         }
       }
-      //bottom line
       if (reel1.stop === 120) {
         if (reelsStr.match(/(Cherry){3}/g)) sum.bottom += bet * 4000;
         else if (reelsStr.match(/(7){3}/g)) sum.bottom += bet * 150;
@@ -184,7 +178,6 @@ const Slot = function (canvas) {
       }
     }
 
-    //heightlight winner row
     let margin = 10;
     highlightPts.forEach((i) => {
       canvas.beginPath();
