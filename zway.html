@@ -1,6 +1,3 @@
-<!-- !! If someone steals this without my consent, let them be haunted by the echoes of their actions and plagued by guilt until they make amends. !! -->
-<!-- !! May they learn the value of originality and the importance of respecting creative work. !! -->
-
 <!DOCTYPE html>
 <html lang="en" class="notranslate" translate="no">
 <head>
@@ -14,42 +11,46 @@
   <meta property="og:url" content="https://schuh.wtf/zway">
   <link rel="icon" type="image/png" sizes="166x166" href="resources/litecoin.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-  <link rel="stylesheet" href="resources/style.css">
 </head>
 <body>
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="popup-close" id="popupCloseButton">&times;</span>
-      <p>16<br>Germany<br><br>
-        <span style="user-select: none;">Roblox: zwayrz</span>
-      </p>
+ <style> body { margin: 0; background-color: #1e1e1e; overflow: hidden; user-select: none; cursor: none; cursor: url('resources/cursor.png'), auto; } #pressToEnter { font-family: 'Courier New', monospace; position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #000; color: #fff; font-size: 15px; z-index: 1; opacity: 1; transition: opacity 1s ease; } #buttonContainer { position: fixed; background-color: rgba(34, 34, 34, 0.75); top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 510px; height: 365px; margin: 0 auto; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 10px; user-select: none; } .button-group { display: flex; justify-content: center; } .small-button { font-family: 'Arial', sans-serif; padding: 10px 20px; background-color: transparent; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 20px; cursor: pointer; border: 1px solid #ffffff; margin: 0 8px; width: auto; transition: box-shadow 0.2s ease-in-out; } .small-button:hover { background-color: transparent; border-color: #ffffff; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); color: #ffffff; } .profile-picture { display: block; margin: 0 auto; max-width: 150px; height: auto; border-radius: 50%; margin-bottom: 16px; margin-top: 11px; } @keyframes glow { 0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); } 50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.4); } 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); } } @font-face { font-family: 'angelwings'; src: url(Angelwish.ttf); } .header-label { font-family: 'angelwings'; font-size: 56px; font-weight: 700; color: #ffffff; margin: 10px 0; animation: glow 2s linear infinite; } .description { font-family: 'Arial', sans-serif; font-size: 20px; color: #ffffff; margin: 5px 0; margin-bottom: 25px; } .popup { display: none; position: absolute; font-family: 'Arial', sans-serif; top: 50%; left: 50%; user-select: none; margin-top: 280px; transform: translate(-50%, -50%); background-color: rgba(34, 34, 34, 0.75); padding: 20px; border-radius: 10px; color: rgb(255, 255, 255); text-align: center; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); z-index: 2; width: 40%; max-width: 360px; border-top-width: 10px; opacity: 0; transition: opacity 0.4s ease; } .popup-content { position: relative; } .popup-close { position: absolute; top: -35px; right: -10px; font-size: 24px; cursor: pointer; color: white; } </style>
+</head>
+<body>
+    <div id="pressToEnter">
+        <p id="enterText" onclick="startAudio()">> click to enter <</p>
     </div>
-  </div>
-  <div id="particles-js"></div>
-  <script src="resources/particles.min.js"></script>
-  <script src="resources/particleapp.js"></script>
-  <div class="center-box">
-    <div class="container">
-      <img src="https://cdn.discordapp.com/avatars/604014247835598861/a_71db8536552b2e7942c0feff7189de52.gif?size=4096" alt="Profile Picture" class="profile-picture" draggable="false">
-      <div class="header-label">zwayrz</div>
-      <div class="description">nagelneuer benzer</div>
-      <div class="button-group">
-        <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://schuh.wtf/robux');">
-          <i class="fa-solid fa-coins"></i>&nbsp;&nbsp;Robux
-        </a>
-        <a class="small-button" id="popupButton" style="cursor: pointer;">
-          <i class="fa-solid fa-message"></i>&nbsp;&nbsp;About Me
-        </a>
-        <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://discord.com/users/604014247835598861');">
-          <i class="fa-brands fa-discord" style="margin-right: 2px;"></i> Discord
-        </a>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="popup-close" id="popupCloseButton">&times;</span>
+          <p>16<br>Germany<br><br>
+            <span>Roblox: zwayrz</span>
+          </p>
+        </div>
       </div>
+      <div id="particles-js"></div>
+      <script src="resources/particles.min.js"></script>
+      <script src="resources/particleapp.js"></script>
+    <div id="buttonContainer">
+        <img src="https://cdn.discordapp.com/avatars/604014247835598861/a_71db8536552b2e7942c0feff7189de52.gif?size=1024&width=0&height=256" alt="Profile Picture" class="profile-picture" draggable="false">
+        <div class="header-label">zwayrz</div>
+        <div class="description">nagelneuer benzer</div>
+        <div class="button-group">
+            <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://schuh.wtf/robux');">
+                <i class="fa-solid fa-coins"></i>&nbsp;&nbsp;Robux
+              </a>
+              <a class="small-button" id="popupButton" style="cursor: pointer;">
+                <i class="fa-solid fa-message"></i>&nbsp;&nbsp;About Me
+              </a>
+              <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://discord.com/users/604014247835598861');">
+                <i class="fa-brands fa-discord" style="margin-right: 2px;"></i> Discord
+              </a>
+        </div>
     </div>
-  </div>
-  <audio id="audioPlayer" src="resources/photoshop.mp3"></audio>
-  <div class="play-button">
-    <i id="playPauseButton" class="fas fa-play"></i>
-  </div>
-  <script>document.addEventListener('keydown', function (e){if ((e.key==='F12' || (e.ctrlKey && e.shiftKey && e.key==='I')) || (e.ctrlKey && e.shiftKey && e.key==='C') || (e.ctrlKey && e.key==='u') || (e.ctrlKey && e.key==='s') || (e.ctrlKey && e.key==='p') || (e.ctrlKey && e.key==='g') || (e.ctrlKey && e.key==='f') || (e.ctrlKey && e.key==='o') || (e.ctrlKey && e.key==='j') || (e.ctrlKey && e.key==='h') || (e.ctrlKey && e.key==='d') || (e.ctrlKey && e.key==='+') || (e.ctrlKey && e.key==='-')){e.preventDefault();}});(function (){let SSWZ=function (){this.keyScrollHandler=function (e){if (e.ctrlKey){e.preventDefault(); return false;}};}; if (window===top){let sswz=new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler,{passive: false});}})();document.addEventListener('contextmenu', function (e){e.preventDefault();}); var msg=""; msg="Zway" + msg; var position=0; function scrolltitle(){document.title=msg.substring(position, msg.length) + msg.substring(0, position); position++; if (position > msg.length) position=0; window.setTimeout(scrolltitle, 400);}scrolltitle(); const popup=document.getElementById('popup'); const popupButton=document.getElementById('popupButton'); const popupCloseButton=document.getElementById('popupCloseButton'); let popupVisible=false; popupButton.addEventListener('click', ()=>{if (!popupVisible){popup.style.display='block'; setTimeout(()=>{popup.style.opacity=1;}, 15); popupVisible=true;}else{closePopup();}}); popupCloseButton.addEventListener('click', ()=>{closePopup();}); function closePopup(){popup.style.opacity=0; setTimeout(()=>{popup.style.display='none';}, 400); popupVisible=false;}const audioPlayer=document.getElementById('audioPlayer'); const playPauseButton=document.getElementById('playPauseButton'); let isPlaying=false; audioPlayer.volume=0.85; audioPlayer.loop=true; playPauseButton.addEventListener('click', ()=>{if (isPlaying){audioPlayer.pause(); playPauseButton.classList.remove('fa-pause'); playPauseButton.classList.add('fa-play');}else{audioPlayer.play(); playPauseButton.classList.remove('fa-play'); playPauseButton.classList.add('fa-pause');}isPlaying=!isPlaying;}); </script>
+    <audio id="audio" loop>
+        <source src="resources/photoshop.mp3" type="audio/mp3">
+    </audio>
+    <script> function startAudio() { var audio = document.getElementById('audio'); var pressToEnter = document.getElementById('pressToEnter'); var buttonContainer = document.getElementById('buttonContainer'); audio.play(); pressToEnter.style.opacity = 0; setTimeout(() => { pressToEnter.style.display = 'none'; }, 1000); } </script>
+    <script> document.addEventListener('keydown', function (e){if ((e.key==='F12' || (e.ctrlKey && e.shiftKey && e.key==='I')) || (e.ctrlKey && e.shiftKey && e.key==='C') || (e.ctrlKey && e.key==='u') || (e.ctrlKey && e.key==='s') || (e.ctrlKey && e.key==='p') || (e.ctrlKey && e.key==='g') || (e.ctrlKey && e.key==='f') || (e.ctrlKey && e.key==='o') || (e.ctrlKey && e.key==='j') || (e.ctrlKey && e.key==='h') || (e.ctrlKey && e.key==='d') || (e.ctrlKey && e.key==='+') || (e.ctrlKey && e.key==='-')){e.preventDefault();}});(function (){let SSWZ=function (){this.keyScrollHandler=function (e){if (e.ctrlKey){e.preventDefault(); return false;}};}; if (window===top){let sswz=new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler,{passive: false});}})();document.addEventListener('contextmenu', function (e){e.preventDefault();}); var msg=""; msg="Zway" + msg; var position=0; function scrolltitle(){document.title=msg.substring(position, msg.length) + msg.substring(0, position); position++; if (position > msg.length) position=0; window.setTimeout(scrolltitle, 400);}scrolltitle(); const popup=document.getElementById('popup'); const popupButton=document.getElementById('popupButton'); const popupCloseButton=document.getElementById('popupCloseButton'); let popupVisible=false; popupButton.addEventListener('click', ()=>{if (!popupVisible){popup.style.display='block'; setTimeout(()=>{popup.style.opacity=1;}, 15); popupVisible=true;}else{closePopup();}}); popupCloseButton.addEventListener('click', ()=>{closePopup();}); function closePopup(){popup.style.opacity=0; setTimeout(()=>{popup.style.display='none';}, 400); popupVisible=false;}</script>
+</body>
 </body>
 </html>
