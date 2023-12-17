@@ -6,16 +6,6 @@ const Slot = function (canvas) {
   let delta = 0;
   let currentSpin = [];
 
-  this.checkout = function () {
-    if (confirm('Are you sure? We can keep your money better!')) {
-      conf.player.money = 0;
-      conf.balance.value = conf.player.money;
-      conf.win.classList.remove('blink');
-      auto = false;
-      alert('Your operation has been made successfully');
-    }
-  };
-
   this.setCredits = function () {
     conf.player.money = conf.balance.value;
 
@@ -45,7 +35,6 @@ const Slot = function (canvas) {
     conf.bet.setAttribute('disabled', 'disabled');
     conf.balance.setAttribute('disabled', 'disabled');
     conf.mode.setAttribute('disabled', 'disabled');
-    conf.checkout.setAttribute('disabled', 'disabled');
     conf.win.classList.remove('blink');
   };
 
