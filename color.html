@@ -1,3 +1,5 @@
+<!-- original by this buddy pal right here -> https://rebane2001.com/discord-colored-text-generator -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +55,7 @@
         min-height: 32px;
         min-width: 32px;
         border: none;
+        user-select: none;
         border-radius: 3px;
         color: #fff;
         background-color: #4f545c;
@@ -111,14 +114,14 @@
 </style>
 </head>
 <body>
-<h1>Discord <span style="color:#5865F2">Colored</span> Text Generator</h1>
+<h1 style="user-select: none">Discord <span style="color:#5865F2">Colored</span> Text Generator</h1>
 <div class="container">
-<h2>Create your text</h2>
+<h2 style="user-select: none">Create your text</h2>
 <button data-ansi="0" class="button style-button">Reset All</button>
 <button data-ansi="1" class="button style-button ansi-1">Bold</button>
 <button data-ansi="4" class="button style-button ansi-4">Line</button>
 <br><br>
-<strong>FG&nbsp;</strong>
+<strong style="user-select: none">FG&nbsp;</strong>
 <button data-ansi="30" class="button style-button ansi-30-bg">&nbsp;</button>
 <button data-ansi="31" class="button style-button ansi-31-bg">&nbsp;</button>
 <button data-ansi="32" class="button style-button ansi-32-bg">&nbsp;</button>
@@ -128,7 +131,7 @@
 <button data-ansi="36" class="button style-button ansi-36-bg">&nbsp;</button>
 <button data-ansi="37" class="button style-button ansi-37-bg">&nbsp;</button>
 <br><br>
-<strong>BG&nbsp;</strong>
+<strong style="user-select: none">BG&nbsp;</strong>
 <button data-ansi="40" class="button style-button ansi-40">&nbsp;</button>
 <button data-ansi="41" class="button style-button ansi-41">&nbsp;</button>
 <button data-ansi="42" class="button style-button ansi-42">&nbsp;</button>
@@ -248,20 +251,29 @@
     let copyTimeout = null;
 
     copybtn.onclick = () => {
-        const toCopy = "```ansi\n" + nodesToANSI(textarea.childNodes, [{ fg: 2, bg: 2, st:2 }]) + "\n```";
+        const toCopy = "```ansi\n" + nodesToANSI(textarea.childNodes, [{ fg: 2, bg: 2, st: 2 }]) + "\n```";
         navigator.clipboard.writeText(toCopy).then(() => {
             if (copyTimeout) clearTimeout(copyTimeout);
 
-            const funnyCopyMessages = copybtn.innerText = ["Copied!", "Double Copy!", "Triple Copy!", "Dominating!!", "Rampage!!", "Mega Copy!!", "Unstoppable!!", "Wicked Sick!!", "Monster Copy!!!", "GODLIKE!!!", "BEYOND GODLIKE!!!!", Array(16).fill(0).reduce(p => p + String.fromCharCode(Math.floor(Math.random() * 65535)),"")];
+            const funnyCopyMessages = [
+                "Copied!", "Double Copy!", "Triple Copy!", "Dominating!!",
+                "Rampage!!", "Mega Copy!!", "Unstoppable!!", "Wicked Sick!!",
+                "Monster Copy!!!", "GODLIKE!!!", "BEYOND GODLIKE!!!!", "BEYOND GODLIKE!!!!"
+            ];
 
             copybtn.style.backgroundColor = (copyCount <= 8) ? "#3BA55D" : "#ED4245";
             copybtn.innerText = funnyCopyMessages[copyCount];
             copyCount = Math.min(11, copyCount + 1);
+
+            if (copyCount === 11) {
+                copyCount = 10;
+            }
+
             copyTimeout = setTimeout(() => {
                 copyCount = 0;
                 copybtn.style.backgroundColor = null;
                 copybtn.innerText = "Copy Text";
-            }, 2000)
+            }, 2000);
 
         }, (err) => {
             if (copyCount > 2) return;
