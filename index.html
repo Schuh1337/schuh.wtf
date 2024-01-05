@@ -2,49 +2,54 @@
 <!-- !! May they learn the value of originality and the importance of respecting creative work. !! -->
 
 <!DOCTYPE html>
-<html lang="en" class="notranslate" translate="no">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#151515">
-  <meta property="og:title" content="Schuh">
-  <meta property="og:description" content="meowmeowmeow (◣_◢)">
-  <meta property="og:image" content="https://schuh.wtf/resources/litecoin.png">
-  <meta property="og:site_name" content="schuh.wtf">
-  <meta property="og:url" content="https://schuh.wtf">
-  <link rel="icon" type="image/png" sizes="166x166" href="resources/litecoin.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-  <link rel="stylesheet" href="resources/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <meta name="theme-color" content="#151515">
+    <meta property="og:title" content="Schuh">
+    <meta property="og:description" content="meowmeowmeow (◣_◢)">
+    <meta property="og:image" content="https://schuh.wtf/resources/litecoin.png">
+    <meta property="og:site_name" content="schuh.wtf">
+    <meta property="og:url" content="https://schuh.wtf">
+    <link rel="icon" type="image/png" sizes="166x166" href="resources/litecoin.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+</style>
 </head>
 <body>
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="popup-close" id="popupCloseButton">&times;</span>
-      <p>16<br>Germany<br><br>
-        <span style="cursor: pointer", onclick="location.href='mailto:schuh@schuh.wtf';">schuh@schuh.wtf</span>
-      </p>
+    <div id="pressToEnter">
+        <p id="enterText" onclick="startAudio()">> click to enter <</p>
     </div>
-  </div>
-  <div id="particles-js"></div>
-  <script src="resources/particles.min.js"></script>
-  <script src="resources/particleapp.js"></script>
-  <div class="center-box">
-    <div class="container">
-      <img src="resources/cat.gif" alt="Profile Picture" class="profile-picture" draggable="false">
-      <div class="header-label">Schuh</div>
-      <div class="description">pockets full of gold</div>
-      <div class="button-group">
-        <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://schuh.wtf/robux');">
-          <i class="fa-solid fa-coins"></i>&nbsp;&nbsp;Robux
-        </a>
-        <a class="small-button" id="popupButton" style="cursor: pointer;">
-          <i class="fa-solid fa-message"></i>&nbsp;&nbsp;About Me
-        </a>
-        <a class="small-button" cursor="pointer" onclick="javascript: window.open('https://github.com/Schuh1337');">
-          <i class="fa-brands fa-github" style="margin-right: 3px;"></i> GitHub
-        </a>
-      </div>
-    </div>
-  <script src="resources/app.js"></script>
+    <audio id="audio" loop>
+        <source src="resources/BLAST.mp3" type="audio/mp3">
+    </audio>
+    <canvas></canvas>
+    <div id="volumeControl">
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5"/>
+  </div>  
+    <img id="centeredImage" src="https://lanyard.cnrad.dev/api/492707412504215552" alt="Centered Image">
+    <script id="sv" type="x-shader/x-vertex">
+      attribute vec4 vPosition;
+      void main (void) {
+          gl_Position = vPosition;
+      }
+  </script>
+  <script id="sf" type="x-shader/x-fragment">
+      precision mediump float;
+      uniform float time;
+      uniform vec2 resolution;
+      void main(void) {
+          vec2 q = gl_FragCoord.xy / resolution.xy;
+          vec2 p = -1.0 + 2.0 * q;
+          p.x *= resolution.x / resolution.y;
+          float v = p.x + cos(time + p.y);
+          vec3 col = vec3(0.1 * max(0.0, p.y), 0.1 * max(0.1, p.x), 0.2 * max(0.1, p.x)) / abs(v * 2.0);
+          gl_FragColor = vec4(col, 1.0);
+      }
+  </script>
+<script src="app.js"></script>
 </body>
 </html>
+
