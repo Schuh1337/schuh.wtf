@@ -1,1 +1,151 @@
-body { margin: 0; background-color: #1e1e1e; overflow: hidden; user-select: none; cursor: none; cursor: url('resources/cursor.png'), auto;}#pressToEnter { font-family: 'Courier New', monospace; position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #000; color: #fff; font-size: 15px; z-index: 1; opacity: 1; transition: opacity 1s ease;}canvas { width: 100%; height: 100vh; position: absolute; z-index: -1;}#centeredImage {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 100%;max-height: 100%;pointer-events: none;z-index: -1;}#volumeControl {position: fixed;left: 50%;bottom: 30px;transform: translateX(-50%);width: 200px;}#volumeSlider {-webkit-appearance: none;appearance: none;width: 100%;height: 8px;background: #444;cursor: pointer;border-radius: 5px;outline: none;}#volumeSlider::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 20px;height: 20px;background: #fff;cursor: pointer;border-radius: 50%;border: 2px solid #444; margin-top: -6px;transition: background 0.3s ease; }#volumeSlider::-moz-range-thumb {width: 20px;height: 20px;background: #fff;cursor: pointer;border-radius: 50%;border: 2px solid #444;transition: background 0.3s ease;}#volumeSlider::-webkit-slider-thumb:hover {background: #bbb;}#volumeSlider::-moz-range-thumb:hover {background: #bbb;}#volumeSlider::-webkit-slider-runnable-track {height: 8px;border-radius: 5px;}#volumeSlider:focus::-webkit-slider-runnable-track {background: #555;}#volumeSlider::-moz-range-track {height: 8px;border-radius: 5px;background: #444;}#volumeSlider:focus::-moz-range-track {background: #555;}
+document.addEventListener('keydown', function (e) {
+    if (
+        (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) ||
+        (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.key === 's') ||
+        (e.ctrlKey && e.key === 'p') ||
+        (e.ctrlKey && e.key === 'g') ||
+        (e.ctrlKey && e.key === 'f') ||
+        (e.ctrlKey && e.key === 'o') ||
+        (e.ctrlKey && e.key === 'j') ||
+        (e.ctrlKey && e.key === 'h') ||
+        (e.ctrlKey && e.key === 'd') ||
+        (e.ctrlKey && e.key === '+') ||
+        (e.ctrlKey && e.key === '-')
+    ) {
+        e.preventDefault();
+    }
+});
+
+(function () {
+    let SSWZ = function () {
+        this.keyScrollHandler = function (e) {
+            if (e.ctrlKey) {
+                e.preventDefault();
+                return false;
+            }
+        };
+    };
+    if (window === top) {
+        let sswz = new SSWZ();
+        window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false });
+    }
+})();
+
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+var msg = '';
+msg = 'Schuh' + msg;
+var position = 0;
+
+function scrolltitle() {
+    document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+    position++;
+    if (position > msg.length) position = 0;
+    window.setTimeout(scrolltitle, 400);
+}
+
+scrolltitle();
+
+document.addEventListener('DOMContentLoaded', function () {
+    var audio = document.getElementById('audio');
+    var volumeSlider = document.getElementById('volumeSlider');
+
+    audio.volume = volumeSlider.value;
+
+    volumeSlider.addEventListener('input', function () {
+        audio.volume = this.value;
+    });
+});
+
+function startAudio() {
+    var audio = document.getElementById('audio');
+    var pressToEnter = document.getElementById('pressToEnter');
+
+    audio.play();
+
+    pressToEnter.style.transition = 'opacity 1s ease';
+    pressToEnter.style.opacity = 0;
+
+    setTimeout(() => {
+        pressToEnter.style.display = 'none';
+    }, 1000);
+}
+
+function updateVolume() {
+    var audio = document.getElementById('audio');
+    var volumeSlider = document.getElementById('volumeSlider');
+    audio.volume = volumeSlider.value;
+}
+
+(function () {
+    let canvas = document.querySelector('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let ut, st = Date.now();
+
+    function initShaders(gl, vertexShaderId, fragmentShaderId) {
+        let vertexEl = document.querySelector(vertexShaderId);
+        let vertexShader = gl.createShader(gl.VERTEX_SHADER);
+        gl.shaderSource(vertexShader, vertexEl.text);
+        gl.compileShader(vertexShader);
+
+        if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+            debugger;
+        }
+
+        let fragmentEl = document.querySelector(fragmentShaderId);
+        let fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+        gl.shaderSource(fragmentShader, fragmentEl.text);
+        gl.compileShader(fragmentShader);
+
+        if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+            debugger;
+        }
+
+        let program = gl.createProgram();
+        gl.attachShader(program, vertexShader);
+        gl.attachShader(program, fragmentShader);
+        gl.linkProgram(program);
+        gl.useProgram(program);
+
+        return program;
+    }
+
+    function initGraphics() {
+        gl = canvas.getContext('webgl');
+        let width = canvas.width;
+        let height = canvas.height;
+        gl.viewport(0, 0, width, height);
+
+        let program = initShaders(gl, '#sv', '#sf');
+        let buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+
+        gl.bufferData(
+            gl.ARRAY_BUFFER,
+            new Float32Array([-1, 1, -1, -1, 1, -1, 1, 1]),
+            gl.STATIC_DRAW,
+        );
+
+        let vPosition = gl.getAttribLocation(program, 'vPosition');
+        gl.vertexAttribPointer(vPosition, 2, gl.FLOAT, false, 0, 0);
+        gl.enableVertexAttribArray(vPosition);
+
+        ut = gl.getUniformLocation(program, 'time');
+        let resolution = new Float32Array([canvas.width, canvas.height]);
+        gl.uniform2fv(gl.getUniformLocation(program, 'resolution'), resolution);
+    }
+
+    function render() {
+        gl.uniform1f(ut, (Date.now() - st) / 1000);
+        gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
+        requestAnimationFrame(render);
+    }
+
+    initGraphics();
+    render();
+})();
