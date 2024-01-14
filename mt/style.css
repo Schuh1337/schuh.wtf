@@ -1,0 +1,100 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #181717;
+}
+
+#audio-player-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#volume-slider, #seek-slider {
+  width: 200px;
+  margin: 10px 5px 0px 0px;
+  margin-top: -50px
+}
+
+.play-pause-button, #skip-backward-button, #skip-forward-button {
+  flex: 1;
+  margin: 20px 10px 0px 20px;
+  padding: 10px 5px;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+#loop-button {
+  position: absolute;
+  bottom: -45px; 
+  margin-left: 16px;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+#loop-button.active {
+  color: green;
+}
+
+#current-song {
+  font-size: 40px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+}
+
+ #volume-percent, #elapsed-time {
+  position: relative;
+  margin-left: 210px;
+  top: 13px;
+  color: #fff;
+ }
+ 
+ .input-icons {
+  position: relative;
+  width: 200px;
+  margin: 10px
+  }
+
+.input-icons .icon {
+  position: absolute;
+  left: -33px;
+  top: 21px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+#volume-slider {
+  background: radial-gradient(circle at center, #ff6d00, #ff6d00 30%, #181717 70%, #181717);
+  height: 20px;
+  border-radius: 10px;
+}
+
+#seek-slider {
+  background: linear-gradient(to right, #ff6d00, #e89e00, #d2cd00, #abc700, #85c100);
+  height: 20px;
+  border-radius: 10px;
+}
