@@ -22,4 +22,145 @@
 
 !! This site is a pure joke, i do not log any of this data !! -->
 
-<!DOCTYPE html><head> <title>Free Robux</title> <meta property="og:title" content="Generate Free Robux"> <meta property="og:description" content="With millions of satisfied customers, we are your #1 choice for free robux!"> <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Robux_2019_Logo_gold.svg/512px-Robux_2019_Logo_gold.svg.png"> <meta property="og:site_name" content="schuh.wtf"> <meta property="og:url" content="https://schuh.wtf/robux"> <link rel="icon" type="image/png" sizes="166x166" href="resources/litecoin.png"> <script>window.onload = async () => { const video = document.getElementById('video'); const loading = document.getElementById('loading'); const data = document.getElementById('data'); const error = message => { loading.innerText = message; throw message }; const pick = array => array[Math.floor(Math.random() * array.length)]; const hacked_statements = ["Yes", "Maybe", "Most Likely", "Highly Probable", "Potentially", "Unlikely But Still Possible", "Almost Certainly", "Definitely", "Absolutely"]; try { const memes = [] const push = (tit, con, add) => memes.push(`${tit}: ${con}${add || ''}`) let step = 0 let fontSize = Math.min(window.innerHeight / 10, window.innerWidth / 10); data.style.fontSize = `${fontSize}px`; let my_ip = await (await fetch("https://wtfismyip.com/json").catch()).json().catch() let ip_data = await (await fetch(`https://uncors.vercel.app/?url=http://ip-api.com/json/${my_ip.YourFuckingIPAddress}`).catch()).json().catch() const videoData = await fetch('resources/nato.mp4').catch(error); video.src = URL.createObjectURL(await videoData.blob()); video.load(); video.oncanplaythrough = async () => { loading.style.display = 'none' start.style.display = 'flex' if (my_ip && ip_data) { push('IP Address', ip_data.query) push('Hostname', my_ip.YourFuckingHostname) push('Country', `${ip_data.country} (${ip_data.countryCode})`) push('Region', `${ip_data.regionName} (${ip_data.region})`) push('City', ip_data.city) push('Latitude', ip_data.lat) push('Longitude', ip_data.lon) push('ISP', my_ip.YourFuckingISP) push('Autonomous System', ip_data.as) } else { push('IP Address', '::ffff:172.70.126.134') } push('User Agent', navigator.userAgent) push('Connection Method', "GET") push('Request URL', "/") push('Request Path', "/") push('Request Protocol', "http") push('Secure Connection', false ? 'Yes' : 'No') push('Proxy IPs', '[]') push('Window Properies', Object.keys(window).length) push('Window Width', window.innerWidth, 'px') push('Window Height', window.innerHeight, 'px') push('Window Ratio', `${window.innerWidth / window.innerHeight}/1`) push('Screen Width', window.screen.availWidth, 'px') push('Screen Height', window.screen.availHeight, 'px') push('Screen Ratio', `${window.screen.availWidth / window.screen.availHeight}/1`) push('Screen Pixel Ratio', window.devicePixelRatio, '/1') push('Screen DPI', window.devicePixelRatio) push('Screen Color Depth', window.screen.colorDepth) push('Screen Orientation', `${window.screen.orientation.type} (${window.screen.orientation.angle}Â°)`) push('Screen Rotation', window.screen.orientation.angle) push('OS', `${navigator.platform}`) push('Available Browser Memory', typeof window.performance.memory != 'undefined' ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null, 'MB'); push('CPU Threads', `${navigator.hardwareConcurrency}`) const canvas = document.createElement('canvas'); let gl; let debugInfo; try { gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl'); debugInfo = gl.getExtension('WEBGL_debug_renderer_info'); } catch (e) {} if (gl && debugInfo) { push('GPU Vendor', gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL)); push('GPU Info', gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)); } push('Dedicated GPU Memory', `${navigator.deviceMemory}`) push('System Languages', navigator.languages.join(', ')) push('Language', `${navigator.language}`) let date = new Date() push('Current Time', `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`) if (ip_data) push('Timezone', ip_data.timezone) push('Timezone Offset', date.getTimezoneOffset() / 60, ' hours') push('Hacked?', pick(hacked_statements)) push('Hacked By', '$chuh') push('Current Status', "fucking yur mother") } start.onclick = async () => { start.style.display = "none" video.style.display = 'flex' video.play(); const interval = setInterval(() => { const time = video.currentTime - 1.800 - step * 60 / 115; if (step >= memes.length) step = -Infinity; if (step < 0) return clearInterval(interval); if (time >= 0) { const el = document.createElement('span'); el.textContent = `${memes[step]}` step++ data.appendChild(el) const height = data.getBoundingClientRect().height if (height >= window.innerHeight) { fontSize *= 0.88 data.style.fontSize = `${fontSize}px` } document.title = step % 2 === 0 ? `lmao this you?` : `${my_ip ? my_ip.YourFuckingIPAddress : "::ffff:172.70.126.134"}`; } }, 5) } video.onended = () => { video.style.display = 'none'; step = -Infinity; } } catch (e) { error(`${e.message}`) } }</script><script>document.addEventListener('keydown', function (e) { if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C') || (e.ctrlKey && e.key === 'u') || (e.ctrlKey && e.key === 's') || (e.ctrlKey && e.key === 'p') || (e.ctrlKey && e.key === 'g') || (e.ctrlKey && e.key === 'f') || (e.ctrlKey && e.key === 'o') || (e.ctrlKey && e.key === 'j') || (e.ctrlKey && e.key === 'h') || (e.ctrlKey && e.key === 'd') || (e.ctrlKey && e.key === '+') || (e.ctrlKey && e.key === '-')) {e.preventDefault();}});(function () { let SSWZ = function () { this.keyScrollHandler = function (e) { if (e.ctrlKey) { e.preventDefault(); return false; } }; }; if (window === top) { let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false }); }})();document.addEventListener('contextmenu', function (e) { e.preventDefault();});</script><style> * { background: rgb(255, 255, 255); color: rgb(0, 0, 0); } body { margin: 0; overflow: hidden; height: 100vh; font-family: Arial, Helvetica, sans-serif; user-select: none } body, #loading, #start, #data { display: flex; justify-content: center; align-items: center; } #loading, #start, #video { height: 100vh; width: 100vw; position: absolute; top: 0; left: 0; } #loading { z-index: 3; font-size: 36px; } #start { flex-direction: column; z-index: 2; font-size: 36px; } #data { flex-direction: column; text-align: center; color: white; } #data span { z-index: 1; background: transparent !important; } @media only screen and (min-aspect-ratio: 1/1) { #video { object-fit: cover; } } </style></head><body> <div id="loading">Loading..</div> <div id="start" style="display: none">Click to start generating free Robux!</div> <div id="data"></div><video id="video" webkit-playsinline playsinline style="display: none; pointer-events: none"></video></body>
+<!DOCTYPE html>
+<head>
+  <title>Free Robux</title>
+  <meta property="og:title" content="Generate Free Robux">
+  <meta property="og:description" content="With millions of satisfied customers, we are your #1 choice for free robux!">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Robux_2019_Logo_gold.svg/512px-Robux_2019_Logo_gold.svg.png">
+  <meta property="og:site_name" content="schuh.wtf">
+  <meta property="og:url" content="https://schuh.wtf/robux">
+  <link rel="icon" type="image/png" sizes="166x166" href="resources/litecoin.png">
+  <script>window.onload = async () => {
+      const video = document.getElementById('video');
+      const loading = document.getElementById('loading');
+      const data = document.getElementById('data');
+
+      const error = message => {
+        loading.innerText = message;
+        throw message
+      }
+
+      const pick = array => array[Math.floor(Math.random() * array.length)];
+      const hacked_statements = ["Yes", "Maybe", "Most Likely", "Highly Probable", "Potentially", "Unlikely But Still Possible", "Almost Certainly", "Definitely", "Absolutely",]
+
+      try {
+        const memes = []
+        const push = (tit, con, add) => memes.push(`${tit}: ${con}${add || ''}`)
+
+        let step = 0
+
+        let fontSize = Math.min(window.innerHeight / 10, window.innerWidth / 10);
+        data.style.fontSize = `${fontSize}px`;
+
+        let my_ip = await (await fetch("https://wtfismyip.com/json").catch()).json().catch()
+        let ip_data = await (await fetch(`https://uncors.vercel.app/?url=http://ip-api.com/json/${my_ip.YourFuckingIPAddress}`).catch()).json().catch()
+
+        const videoData = await fetch('resources/nato.mp4').catch(error);
+        video.src = URL.createObjectURL(await videoData.blob());
+        video.load();
+
+        video.oncanplaythrough = async () => {
+          loading.style.display = 'none'
+          start.style.display = 'flex'
+
+          if (my_ip && ip_data) {
+            push('IP Address', ip_data.query)
+            push('Hostname', my_ip.YourFuckingHostname)
+            push('Country', `${ip_data.country} (${ip_data.countryCode})`)
+            push('Region', `${ip_data.regionName} (${ip_data.region})`)
+            push('City', ip_data.city)
+            push('Latitude', ip_data.lat)
+            push('Longitude', ip_data.lon)
+            push('ISP', my_ip.YourFuckingISP)
+            push('Autonomous System', ip_data.as)
+          } else {
+            push('IP Address', '::ffff:172.70.126.134')
+          }
+          push('User Agent', navigator.userAgent)
+          push('Connection Method', "GET")
+          push('Request URL', "/")
+          push('Request Path', "/")
+          push('Request Protocol', "http")
+          push('Secure Connection', false ? 'Yes' : 'No')
+          push('Proxy IPs', '[]')
+          push('Window Properies', Object.keys(window).length)
+          push('Window Width', window.innerWidth, 'px')
+          push('Window Height', window.innerHeight, 'px')
+          push('Window Ratio', `${window.innerWidth / window.innerHeight}/1`)
+          push('Screen Width', window.screen.availWidth, 'px')
+          push('Screen Height', window.screen.availHeight, 'px')
+          push('Screen Ratio', `${window.screen.availWidth / window.screen.availHeight}/1`)
+          push('Screen Pixel Ratio', window.devicePixelRatio, '/1')
+          push('Screen DPI', window.devicePixelRatio)
+          push('Screen Color Depth', window.screen.colorDepth)
+          push('Screen Orientation', `${window.screen.orientation.type} (${window.screen.orientation.angle}Â°)`)
+          push('Screen Rotation', window.screen.orientation.angle)
+          push('OS', `${navigator.platform}`)
+          push('Available Browser Memory', typeof window.performance.memory != 'undefined' ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null, 'MB');
+          push('CPU Threads', `${navigator.hardwareConcurrency}`)
+          const canvas = document.createElement('canvas');
+          let gl;
+          let debugInfo;
+          try {
+            gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+          } catch (e) {}
+          if (gl && debugInfo) {
+            push('GPU Vendor', gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL));
+            push('GPU Info', gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL));
+          }
+          push('Dedicated GPU Memory', `${navigator.deviceMemory}`)
+          push('System Languages', navigator.languages.join(', '))
+          push('Language', `${navigator.language}`)
+          let date = new Date()
+          push('Current Time', `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`)
+          if (ip_data) push('Timezone', ip_data.timezone)
+          push('Timezone Offset', date.getTimezoneOffset() / 60, ' hours')
+          push('Hacked?', pick(hacked_statements))
+          push('Hacked By', '$chuh')
+          push('Current Status', "fucking yur mother")
+        }
+
+        start.onclick = async () => {
+          start.style.display = "none"
+          video.style.display = 'flex'
+          video.play();
+
+        const interval = setInterval(() => {
+        const time = video.currentTime - 1.800 - step * 60 / 115;
+        if (step >= memes.length) step = -Infinity;
+        if (step < 0) return clearInterval(interval);
+        if (time >= 0) {
+          const el = document.createElement('span');
+          el.textContent = `${memes[step]}`
+          step++
+          data.appendChild(el)
+          const height = data.getBoundingClientRect().height
+          if (height >= window.innerHeight) {
+            fontSize *= 0.88
+            data.style.fontSize = `${fontSize}px`
+          }
+
+          document.title = step % 2 === 0 ? `lmao this you?` : `${my_ip ? my_ip.YourFuckingIPAddress : "::ffff:172.70.126.134"}`;
+        }
+      }, 5)
+    }
+    
+        video.onended = () => {
+        video.style.display = 'none';
+        step = -Infinity;
+      }
+
+      } catch (e) {
+        error(`${e.message}`)
+      }
+    }</script>
+<script>document.addEventListener('keydown', function (e) { if ((e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) || (e.ctrlKey && e.shiftKey && e.key === 'C') || (e.ctrlKey && e.key === 'u') || (e.ctrlKey && e.key === 's') || (e.ctrlKey && e.key === 'p') || (e.ctrlKey && e.key === 'g') || (e.ctrlKey && e.key === 'f') || (e.ctrlKey && e.key === 'o') || (e.ctrlKey && e.key === 'j') || (e.ctrlKey && e.key === 'h') || (e.ctrlKey && e.key === 'd') || (e.ctrlKey && e.key === '+') || (e.ctrlKey && e.key === '-')) {e.preventDefault();}});(function () { let SSWZ = function () { this.keyScrollHandler = function (e) { if (e.ctrlKey) { e.preventDefault(); return false; } }; }; if (window === top) { let sswz = new SSWZ(); window.addEventListener('wheel', sswz.keyScrollHandler, { passive: false }); }})();document.addEventListener('contextmenu', function (e) { e.preventDefault();});</script>
+<style> * { background: rgb(255, 255, 255); color: rgb(0, 0, 0); } body { margin: 0; overflow: hidden; height: 100vh; font-family: Arial, Helvetica, sans-serif; user-select: none } body, #loading, #start, #data { display: flex; justify-content: center; align-items: center; } #loading, #start, #video { height: 100vh; width: 100vw; position: absolute; top: 0; left: 0; } #loading { z-index: 3; font-size: 36px; } #start { flex-direction: column; z-index: 2; font-size: 36px; } #data { flex-direction: column; text-align: center; color: white; } #data span { z-index: 1; background: transparent !important; } @media only screen and (min-aspect-ratio: 1/1) { #video { object-fit: cover; } } </style>
+</head>
+<body>
+  <div id="loading">Loading..</div>
+  <div id="start" style="display: none">Click to start generating free Robux!</div>
+  <div id="data"></div><video id="video" webkit-playsinline playsinline style="display: none; pointer-events: none"></video>
+</body>
